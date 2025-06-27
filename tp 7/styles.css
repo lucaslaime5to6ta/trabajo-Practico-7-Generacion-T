@@ -1,0 +1,120 @@
+/* Ejercicio 1: Contenedor Grid Basico */
+.grid-basico {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    grid-template-rows: 100px 100px; /* 2 filas de 100px */
+    gap: 10px; /* Espacio entre celdas */
+    margin-bottom: 40px;
+    background: #f0f0f0;
+    padding: 10px;
+  }
+  .grid-basico > div {
+    background: #4caf50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  /* Ejercicio 2: Areas de Grid */
+  .layout-areas {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar content"
+      "footer footer";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 15px;
+    margin-bottom: 40px;
+    background: #e3f2fd;
+    padding: 10px;
+    height: 300px;
+  }
+  .header {
+    grid-area: header;
+    background: #1976d2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  .sidebar {
+    grid-area: sidebar;
+    background: #64b5f6;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .content {
+    grid-area: content;
+    background: #90caf9;
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .footer {
+    grid-area: footer;
+    background: #1976d2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  /* Ejercicio 3: Espaciado y Alineacion */
+  .grid-alineacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px;
+    gap: 20px; /* Espaciado entre filas y columnas */
+    background: #fff3e0;
+    padding: 10px;
+    margin-bottom: 40px;
+  }
+  .grid-alineacion > div {
+    background: #fb8c00;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center; /* Alineacion horizontal */
+    align-items: center;     /* Alineacion vertical */
+  }
+  /* Alineacion individual para un elemento */
+  .alineacion-individual {
+    justify-self: end; /* se mueve al final horizontalmente */
+    align-self: start; /* se mueve al inicio verticalmente */
+    background: #ef6c00;
+  }
+  
+  /* Ejercicio 4: Ubicacion Avanzada con Lineas */
+  .grid-ubicacion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 100px;
+    gap: 15px;
+    background: #fce4ec;
+    padding: 10px;
+  }
+  .grid-ubicacion > div {
+    background: #d81b60;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Un elemento que ocupa 2 columnas y 2 filas */
+  .span-2 {
+    grid-column: span 2; /* ocupa 2 columnas */
+    grid-row: span 2;    /* ocupa 2 filas */
+    background: #880e4f;
+  }  
